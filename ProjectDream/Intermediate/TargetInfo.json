@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "ProjectDream",
+			"Path": "D:\\UnrealProjects\\Maestria\\Dream\\ProjectDream\\Source\\ProjectDream.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ProjectDreamEditor",
+			"Path": "D:\\UnrealProjects\\Maestria\\Dream\\ProjectDream\\Source\\ProjectDreamEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

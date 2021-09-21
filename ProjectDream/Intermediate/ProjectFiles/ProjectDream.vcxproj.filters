@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\ProjectDream.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{A38B3A88-641C-4231-BC1D-6BAB8311AEF0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ProjectDream.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ProjectDreamEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{ED288876-BDCD-4806-8C71-12703B813F82}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\ProjectDream">
+      <UniqueIdentifier>{85815D3E-4E7C-4ADA-A29F-4091CD205265}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ProjectDream\ProjectDream.Build.cs">
+      <Filter>Source\ProjectDream</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\ProjectDream\ProjectDream.cpp">
+      <Filter>Source\ProjectDream</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectDream\ProjectDream.h">
+      <Filter>Source\ProjectDream</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectDream\ProjectDreamCharacter.cpp">
+      <Filter>Source\ProjectDream</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectDream\ProjectDreamCharacter.h">
+      <Filter>Source\ProjectDream</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectDream\ProjectDreamGameMode.cpp">
+      <Filter>Source\ProjectDream</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectDream\ProjectDreamGameMode.h">
+      <Filter>Source\ProjectDream</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectDream\ProjectDreamPlayerController.cpp">
+      <Filter>Source\ProjectDream</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectDream\ProjectDreamPlayerController.h">
+      <Filter>Source\ProjectDream</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
