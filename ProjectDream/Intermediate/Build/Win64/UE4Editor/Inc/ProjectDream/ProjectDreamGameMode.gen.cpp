@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProjectDream/ProjectDreamGameMode.h"
+#include "ProjectDream/Framework/ProjectDreamGameMode.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -41,8 +41,8 @@ void EmptyLinkFunctionForGeneratedCodeProjectDreamGameMode() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProjectDreamGameMode_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering Utilities|Transformation" },
-		{ "IncludePath", "ProjectDreamGameMode.h" },
-		{ "ModuleRelativePath", "ProjectDreamGameMode.h" },
+		{ "IncludePath", "Framework/ProjectDreamGameMode.h" },
+		{ "ModuleRelativePath", "Framework/ProjectDreamGameMode.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeProjectDreamGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AProjectDreamGameMode, 514497402);
+	IMPLEMENT_CLASS(AProjectDreamGameMode, 2033684191);
 	template<> PROJECTDREAM_API UClass* StaticClass<AProjectDreamGameMode>()
 	{
 		return AProjectDreamGameMode::StaticClass();

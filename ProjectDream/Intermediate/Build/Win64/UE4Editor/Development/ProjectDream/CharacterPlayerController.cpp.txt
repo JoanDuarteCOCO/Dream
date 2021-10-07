@@ -1,0 +1,3 @@
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\Definitions.ProjectDream.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Source\ProjectDream\Player\PlayerControllers\CharacterPlayerController.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Inc\ProjectDream\CharacterPlayerController.generated.h

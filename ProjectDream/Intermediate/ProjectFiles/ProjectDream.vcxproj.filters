@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ProjectDream.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A38B3A88-641C-4231-BC1D-6BAB8311AEF0}</UniqueIdentifier>
+      <UniqueIdentifier>{CCC05B77-4997-42ED-B381-263998CCF5FF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ProjectDream.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{ED288876-BDCD-4806-8C71-12703B813F82}</UniqueIdentifier>
+      <UniqueIdentifier>{996569A4-718B-4D4D-AB08-58AFBC9DA138}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ProjectDream">
-      <UniqueIdentifier>{85815D3E-4E7C-4ADA-A29F-4091CD205265}</UniqueIdentifier>
+      <UniqueIdentifier>{A463FCB2-7D44-47E8-B9E0-B7082CCC1B7E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ProjectDream\ProjectDream.Build.cs">
       <Filter>Source\ProjectDream</Filter>
@@ -47,17 +47,50 @@
     <ClInclude Include="..\..\Source\ProjectDream\ProjectDreamCharacter.h">
       <Filter>Source\ProjectDream</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\ProjectDream\ProjectDreamGameMode.cpp">
-      <Filter>Source\ProjectDream</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectDream\ProjectDreamGameMode.h">
-      <Filter>Source\ProjectDream</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectDream\ProjectDreamPlayerController.cpp">
       <Filter>Source\ProjectDream</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectDream\ProjectDreamPlayerController.h">
       <Filter>Source\ProjectDream</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectDream\Framework">
+      <UniqueIdentifier>{52EBBB00-0FE2-4446-8298-76E3238C6DDD}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectDream\Framework\ProjectDreamGameMode.cpp">
+      <Filter>Source\ProjectDream\Framework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectDream\Framework\ProjectDreamGameMode.h">
+      <Filter>Source\ProjectDream\Framework</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectDream\Player">
+      <UniqueIdentifier>{460A513E-5376-48D0-AF34-0641F54D9FFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ProjectDream\Player\Animations">
+      <UniqueIdentifier>{67B53915-D207-49DC-B16C-5DC32CEA9787}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectDream\Player\Animations\CharacterAnimInstance.cpp">
+      <Filter>Source\ProjectDream\Player\Animations</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectDream\Player\Animations\CharacterAnimInstance.h">
+      <Filter>Source\ProjectDream\Player\Animations</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectDream\Player\Characters">
+      <UniqueIdentifier>{87A1EBF1-4C9D-4C4D-B9EA-2C9D324E1D22}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectDream\Player\Characters\TestCharacter.cpp">
+      <Filter>Source\ProjectDream\Player\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectDream\Player\Characters\TestCharacter.h">
+      <Filter>Source\ProjectDream\Player\Characters</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectDream\Player\PlayerControllers">
+      <UniqueIdentifier>{D218DA4A-60F2-44E8-9FEC-9BCAEAA3197F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectDream\Player\PlayerControllers\CharacterPlayerController.cpp">
+      <Filter>Source\ProjectDream\Player\PlayerControllers</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectDream\Player\PlayerControllers\CharacterPlayerController.h">
+      <Filter>Source\ProjectDream\Player\PlayerControllers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

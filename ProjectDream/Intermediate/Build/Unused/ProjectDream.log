@@ -1,0 +1,12 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\UnrealProjects\Maestria\Dream).
+  Building ProjectDreamEditor...
+  Using Visual Studio 2019 14.29.30133 toolchain (D:\Program Files\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 4 actions with 8 processes...
+    [1/4] CharacterPlayerController.cpp
+    [2/4] UE4Editor-ProjectDream-0011.lib
+       Creando biblioteca D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\UE4Editor-ProjectDream-0011.lib y objeto D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\UE4Editor-ProjectDream-0011.exp
+    [3/4] UE4Editor-ProjectDream-0011.dll
+       Creando biblioteca D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\UE4Editor-ProjectDream-0011.suppressed.lib y objeto D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\UE4Editor-ProjectDream-0011.suppressed.exp
+    [4/4] ProjectDreamEditor.target
+  Total time in Parallel executor: 119.62 seconds
+  Total execution time: 121.00 seconds
