@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ProjectDream.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{CCC05B77-4997-42ED-B381-263998CCF5FF}</UniqueIdentifier>
+      <UniqueIdentifier>{B8A80104-4889-4F37-8D43-BD1592FE0043}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ProjectDream.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{996569A4-718B-4D4D-AB08-58AFBC9DA138}</UniqueIdentifier>
+      <UniqueIdentifier>{06BC15A7-C100-4D5C-B1C7-8A35D503C6FF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ProjectDream">
-      <UniqueIdentifier>{A463FCB2-7D44-47E8-B9E0-B7082CCC1B7E}</UniqueIdentifier>
+      <UniqueIdentifier>{D85A6E9C-C01D-4DA7-B3D1-9ADBE41C781B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ProjectDream\ProjectDream.Build.cs">
       <Filter>Source\ProjectDream</Filter>
@@ -54,7 +54,7 @@
       <Filter>Source\ProjectDream</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectDream\Framework">
-      <UniqueIdentifier>{52EBBB00-0FE2-4446-8298-76E3238C6DDD}</UniqueIdentifier>
+      <UniqueIdentifier>{23A38261-2A91-4990-A7B5-C046624B0698}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ProjectDream\Framework\ProjectDreamGameMode.cpp">
       <Filter>Source\ProjectDream\Framework</Filter>
@@ -63,10 +63,25 @@
       <Filter>Source\ProjectDream\Framework</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectDream\Player">
-      <UniqueIdentifier>{460A513E-5376-48D0-AF34-0641F54D9FFB}</UniqueIdentifier>
+      <UniqueIdentifier>{8A16F9D9-AA59-42E1-BDD2-165D9AA62ACE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\ProjectDream\Player\Actors">
+      <UniqueIdentifier>{A3C22F67-5DAA-42CF-B660-18F64CA5AA3D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectDream\Player\Actors\DummyTarget.cpp">
+      <Filter>Source\ProjectDream\Player\Actors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectDream\Player\Actors\DummyTarget.h">
+      <Filter>Source\ProjectDream\Player\Actors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectDream\Player\Actors\Weapon.cpp">
+      <Filter>Source\ProjectDream\Player\Actors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectDream\Player\Actors\Weapon.h">
+      <Filter>Source\ProjectDream\Player\Actors</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectDream\Player\Animations">
-      <UniqueIdentifier>{67B53915-D207-49DC-B16C-5DC32CEA9787}</UniqueIdentifier>
+      <UniqueIdentifier>{C2C029B4-9E6D-4AFA-990C-3905A369B3CB}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ProjectDream\Player\Animations\CharacterAnimInstance.cpp">
       <Filter>Source\ProjectDream\Player\Animations</Filter>
@@ -75,7 +90,7 @@
       <Filter>Source\ProjectDream\Player\Animations</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectDream\Player\Characters">
-      <UniqueIdentifier>{87A1EBF1-4C9D-4C4D-B9EA-2C9D324E1D22}</UniqueIdentifier>
+      <UniqueIdentifier>{75E64789-2D86-470E-9C37-96F08ED8C47B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ProjectDream\Player\Characters\TestCharacter.cpp">
       <Filter>Source\ProjectDream\Player\Characters</Filter>
@@ -84,7 +99,7 @@
       <Filter>Source\ProjectDream\Player\Characters</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectDream\Player\PlayerControllers">
-      <UniqueIdentifier>{D218DA4A-60F2-44E8-9FEC-9BCAEAA3197F}</UniqueIdentifier>
+      <UniqueIdentifier>{B3CBBB66-ECD6-48BA-BCCB-ECE8442183D3}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ProjectDream\Player\PlayerControllers\CharacterPlayerController.cpp">
       <Filter>Source\ProjectDream\Player\PlayerControllers</Filter>

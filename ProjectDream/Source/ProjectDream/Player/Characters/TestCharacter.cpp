@@ -6,6 +6,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/PlayerController.h"
 #include "Engine/World.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ATestCharacter::ATestCharacter()
@@ -43,6 +44,10 @@ ATestCharacter::ATestCharacter()
 void ATestCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+
+	//Aqui se manda a llamar lafuncionpara spawnear el arma en el brazo del player cuando inicie el juego
+	SpawnWeapon();
 	
 }
 
@@ -69,7 +74,7 @@ static void InitializeInputs()
 
 
 		//Generarndo Inputs para Acciones (Disparos,Salto,etc...)
-		UPlayerInput::AddEngineDefinedActionMapping(FInputActionKeyMapping(FName("Fire"),EKeys::RightMouseButton));
+		UPlayerInput::AddEngineDefinedActionMapping(FInputActionKeyMapping(FName("Fire"),EKeys::LeftMouseButton));
 	}
 }
 
@@ -141,6 +146,31 @@ void ATestCharacter::MoveRight(float Value)
 void ATestCharacter::Fire()
 {
 	bIsFiring = true;
+
+	if (AWeapon* WP = Cast<AWeapon>(UGameplayStatics::GetActorOfClass(this,AWeapon::StaticClass())))
+	{
+		WP->WeaponFire();
+	}
+
+}
+
+
+//Spawnear arma en el brazo del player
+void ATestCharacter::SpawnWeapon()
+{
+	
+	if (WeaponBlueprint)
+	{
+		FActorSpawnParameters SpawnParameters;
+		SpawnParameters.Instigator = GetInstigator();
+		SpawnParameters.Owner = this;
+		SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+		AWeapon* Weapon = GetWorld()->SpawnActor<AWeapon>(WeaponBlueprint, GetActorLocation(), GetActorRotation(), SpawnParameters);
+		Weapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, FName("WeaponSocket"));
+	}
+
+	
 }
 
 #pragma endregion

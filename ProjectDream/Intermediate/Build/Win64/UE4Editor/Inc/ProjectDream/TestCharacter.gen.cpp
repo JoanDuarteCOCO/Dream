@@ -17,9 +17,18 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 	PROJECTDREAM_API UClass* Z_Construct_UClass_ATestCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_ProjectDream();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	PROJECTDREAM_API UClass* Z_Construct_UClass_AWeapon_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(ATestCharacter::execSpawnWeapon)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SpawnWeapon();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ATestCharacter::execFire)
 	{
 		P_FINISH;
@@ -50,6 +59,7 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 			{ "Fire", &ATestCharacter::execFire },
 			{ "MoveForward", &ATestCharacter::execMoveForward },
 			{ "MoveRight", &ATestCharacter::execMoveRight },
+			{ "SpawnWeapon", &ATestCharacter::execSpawnWeapon },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -144,6 +154,29 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ATestCharacter_SpawnWeapon_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATestCharacter_SpawnWeapon_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Player" },
+		{ "ModuleRelativePath", "Player/Characters/TestCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATestCharacter_SpawnWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATestCharacter, nullptr, "SpawnWeapon", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATestCharacter_SpawnWeapon_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATestCharacter_SpawnWeapon_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATestCharacter_SpawnWeapon()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATestCharacter_SpawnWeapon_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ATestCharacter_NoRegister()
 	{
 		return ATestCharacter::StaticClass();
@@ -155,6 +188,10 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WeaponBlueprint_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_WeaponBlueprint;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BoomCamera_MetaData[];
 #endif
@@ -180,6 +217,7 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 		{ &Z_Construct_UFunction_ATestCharacter_Fire, "Fire" }, // 3555240625
 		{ &Z_Construct_UFunction_ATestCharacter_MoveForward, "MoveForward" }, // 1457832974
 		{ &Z_Construct_UFunction_ATestCharacter_MoveRight, "MoveRight" }, // 4190806255
+		{ &Z_Construct_UFunction_ATestCharacter_SpawnWeapon, "SpawnWeapon" }, // 3125635497
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATestCharacter_Statics::Class_MetaDataParams[] = {
@@ -188,6 +226,15 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 		{ "ModuleRelativePath", "Player/Characters/TestCharacter.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATestCharacter_Statics::NewProp_WeaponBlueprint_MetaData[] = {
+		{ "Category", "Player" },
+		{ "Comment", "//Variable que pemrite instanciar el Blueprint del arma (Weapon)\n" },
+		{ "ModuleRelativePath", "Player/Characters/TestCharacter.h" },
+		{ "ToolTip", "Variable que pemrite instanciar el Blueprint del arma (Weapon)" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATestCharacter_Statics::NewProp_WeaponBlueprint = { "WeaponBlueprint", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATestCharacter, WeaponBlueprint), Z_Construct_UClass_AWeapon_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ATestCharacter_Statics::NewProp_WeaponBlueprint_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATestCharacter_Statics::NewProp_WeaponBlueprint_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATestCharacter_Statics::NewProp_BoomCamera_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
@@ -221,6 +268,7 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATestCharacter_Statics::NewProp_bIsFiring = { "bIsFiring", nullptr, (EPropertyFlags)0x0040000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ATestCharacter), &Z_Construct_UClass_ATestCharacter_Statics::NewProp_bIsFiring_SetBit, METADATA_PARAMS(Z_Construct_UClass_ATestCharacter_Statics::NewProp_bIsFiring_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATestCharacter_Statics::NewProp_bIsFiring_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATestCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATestCharacter_Statics::NewProp_WeaponBlueprint,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATestCharacter_Statics::NewProp_BoomCamera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATestCharacter_Statics::NewProp_FollowCamera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATestCharacter_Statics::NewProp_bIsFiring,
@@ -252,7 +300,7 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATestCharacter, 2445943046);
+	IMPLEMENT_CLASS(ATestCharacter, 3953380222);
 	template<> PROJECTDREAM_API UClass* StaticClass<ATestCharacter>()
 	{
 		return ATestCharacter::StaticClass();

@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
+#include "../Actors/Weapon.h"
 #include "TestCharacter.generated.h"
 
 UCLASS()
@@ -22,6 +23,11 @@ public:
 	FORCEINLINE USpringArmComponent* GetBoomCamera() const { return BoomCamera; }
 
 	FORCEINLINE UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+	//Variable que pemrite instanciar el Blueprint del arma (Weapon)
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category=Player)
+	TSubclassOf<AWeapon> WeaponBlueprint;
+
 
 protected:
 	// Called when the game starts or when spawned
@@ -43,6 +49,10 @@ public:
 
 	UFUNCTION(BlueprintCallable,Category="Player")
 	void Fire();
+
+	UFUNCTION(BlueprintCallable,Category="Player")
+	void SpawnWeapon();
+
 
 private:
 	
