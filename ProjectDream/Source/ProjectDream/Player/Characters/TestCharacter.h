@@ -29,6 +29,20 @@ public:
 	TSubclassOf<AWeapon> WeaponBlueprint;
 
 
+
+	//Funciones para aplicar la mecania de Dash
+	UFUNCTION()
+		void Dash();
+
+	UFUNCTION()
+		void StopDash();
+
+	UFUNCTION()
+		void ResetDash();
+
+	FTimerHandle UnusedHandle;
+
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -54,6 +68,7 @@ public:
 	void SpawnWeapon();
 
 
+
 private:
 	
 	//Propiedades que le pertenecen al jugador
@@ -67,5 +82,20 @@ private:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category=Player,meta=(AllowPrivateAccess = true))
 	bool bIsFiring = false;
 
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Player, meta = (AllowPrivateAccess = true))
+		float DashDistance = 3000.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Player, meta = (AllowPrivateAccess = true))
+		float DashCooldown = 1.5f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Player, meta = (AllowPrivateAccess = true))
+		float DashStop = 0.2f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Player, meta = (AllowPrivateAccess = true))
+		float bCanDash = true;
+
+
+	friend class APlayerHUD;
 
 };

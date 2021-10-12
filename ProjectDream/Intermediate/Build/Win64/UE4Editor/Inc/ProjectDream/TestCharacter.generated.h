@@ -19,7 +19,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	DECLARE_FUNCTION(execSpawnWeapon); \
 	DECLARE_FUNCTION(execFire); \
 	DECLARE_FUNCTION(execMoveRight); \
-	DECLARE_FUNCTION(execMoveForward);
+	DECLARE_FUNCTION(execMoveForward); \
+	DECLARE_FUNCTION(execResetDash); \
+	DECLARE_FUNCTION(execStopDash); \
+	DECLARE_FUNCTION(execDash);
 
 
 #define ProjectDream_Source_ProjectDream_Player_Characters_TestCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
@@ -27,7 +30,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	DECLARE_FUNCTION(execSpawnWeapon); \
 	DECLARE_FUNCTION(execFire); \
 	DECLARE_FUNCTION(execMoveRight); \
-	DECLARE_FUNCTION(execMoveForward);
+	DECLARE_FUNCTION(execMoveForward); \
+	DECLARE_FUNCTION(execResetDash); \
+	DECLARE_FUNCTION(execStopDash); \
+	DECLARE_FUNCTION(execDash);
 
 
 #define ProjectDream_Source_ProjectDream_Player_Characters_TestCharacter_h_15_INCLASS_NO_PURE_DECLS \
@@ -75,7 +81,11 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATestCharacter); \
 #define ProjectDream_Source_ProjectDream_Player_Characters_TestCharacter_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__BoomCamera() { return STRUCT_OFFSET(ATestCharacter, BoomCamera); } \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ATestCharacter, FollowCamera); } \
-	FORCEINLINE static uint32 __PPO__bIsFiring() { return STRUCT_OFFSET(ATestCharacter, bIsFiring); }
+	FORCEINLINE static uint32 __PPO__bIsFiring() { return STRUCT_OFFSET(ATestCharacter, bIsFiring); } \
+	FORCEINLINE static uint32 __PPO__DashDistance() { return STRUCT_OFFSET(ATestCharacter, DashDistance); } \
+	FORCEINLINE static uint32 __PPO__DashCooldown() { return STRUCT_OFFSET(ATestCharacter, DashCooldown); } \
+	FORCEINLINE static uint32 __PPO__DashStop() { return STRUCT_OFFSET(ATestCharacter, DashStop); } \
+	FORCEINLINE static uint32 __PPO__bCanDash() { return STRUCT_OFFSET(ATestCharacter, bCanDash); }
 
 
 #define ProjectDream_Source_ProjectDream_Player_Characters_TestCharacter_h_12_PROLOG

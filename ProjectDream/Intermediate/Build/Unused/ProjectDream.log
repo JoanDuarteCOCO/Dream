@@ -1,17 +1,12 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\UnrealProjects\Maestria\Dream).
-  Parsing headers for ProjectDreamEditor
-    Running UnrealHeaderTool "D:\UnrealProjects\Maestria\Dream\ProjectDream\ProjectDream.uproject" "D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\ProjectDreamEditor\Development\ProjectDreamEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\sgfar\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for ProjectDreamEditor in 4.8736797 seconds
   Building ProjectDreamEditor...
   Using Visual Studio 2019 14.29.30133 toolchain (D:\Program Files\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 6 actions with 8 processes...
-    [1/6] ProjectDream.init.gen.cpp
-    [2/6] DummyTarget.gen.cpp
-    [3/6] DummyTarget.cpp
-    [4/6] UE4Editor-ProjectDream-0007.lib
-       Creando biblioteca D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\UE4Editor-ProjectDream-0007.lib y objeto D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\UE4Editor-ProjectDream-0007.exp
-    [5/6] UE4Editor-ProjectDream-0007.dll
-       Creando biblioteca D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\UE4Editor-ProjectDream-0007.suppressed.lib y objeto D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\UE4Editor-ProjectDream-0007.suppressed.exp
-    [6/6] ProjectDreamEditor.target
-  Total time in Parallel executor: 5.37 seconds
-  Total execution time: 11.90 seconds
+  Building 4 actions with 8 processes...
+    [1/4] TestCharacter.cpp
+    [2/4] UE4Editor-ProjectDream-0021.lib
+       Creando biblioteca D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\UE4Editor-ProjectDream-0021.lib y objeto D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\UE4Editor-ProjectDream-0021.exp
+    [3/4] UE4Editor-ProjectDream-0021.dll
+       Creando biblioteca D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\UE4Editor-ProjectDream-0021.suppressed.lib y objeto D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\UE4Editor-ProjectDream-0021.suppressed.exp
+    [4/4] ProjectDreamEditor.target
+  Total time in Parallel executor: 4.33 seconds
+  Total execution time: 5.50 seconds

@@ -7,5 +7,8 @@ ACharacterPlayerController::ACharacterPlayerController()
 {
 	bShowMouseCursor = true;
 	DefaultMouseCursor = EMouseCursor::Default;
+
+	//GetMousePosition();
+
 }
 

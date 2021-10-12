@@ -38,7 +38,13 @@ ATestCharacter::ATestCharacter()
 	GetCharacterMovement()->bConstrainToPlane = true;
 	GetCharacterMovement()->bSnapToPlaneAtStart = true;
 
+	//GetMesh()->SetSimulatePhysics(true);
+
+	//GetCharacterMovement()->Collisi
+	
+
 }
+
 
 // Called when the game starts or when spawned
 void ATestCharacter::BeginPlay()
@@ -48,6 +54,8 @@ void ATestCharacter::BeginPlay()
 
 	//Aqui se manda a llamar lafuncionpara spawnear el arma en el brazo del player cuando inicie el juego
 	SpawnWeapon();
+
+	
 	
 }
 
@@ -75,6 +83,7 @@ static void InitializeInputs()
 
 		//Generarndo Inputs para Acciones (Disparos,Salto,etc...)
 		UPlayerInput::AddEngineDefinedActionMapping(FInputActionKeyMapping(FName("Fire"),EKeys::LeftMouseButton));
+		UPlayerInput::AddEngineDefinedActionMapping(FInputActionKeyMapping(FName("Dash"), EKeys::SpaceBar));
 	}
 }
 
@@ -86,6 +95,11 @@ static void InitializeInputs()
 void ATestCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	//if (DashTimer > 0.0f)
+	//{
+	//	DashTimer = FMath::Max(0.0f,DashTimer - DeltaTime);
+	//}
 
 }
 
@@ -104,6 +118,7 @@ void ATestCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 	//Entradas para Acciones (Disparos,etc...)
 	PlayerInputComponent->BindAction(FName("Fire"),EInputEvent::IE_Pressed,this,&ATestCharacter::Fire);
+	PlayerInputComponent->BindAction(FName("Dash"), EInputEvent::IE_Pressed, this, &ATestCharacter::Dash);
 }
 
 
@@ -173,7 +188,37 @@ void ATestCharacter::SpawnWeapon()
 	
 }
 
+
+
+
+void ATestCharacter::Dash()
+{
+	if (bCanDash)
+	{
+		GetCharacterMovement()->BrakingFrictionFactor = 0.0f;
+		LaunchCharacter(FVector(GetLastMovementInputVector().X,GetLastMovementInputVector().Y,0.0f).GetSafeNormal() * DashDistance,true,true);
+		bCanDash = false;
+		GetWorldTimerManager().SetTimer(UnusedHandle,this,&ATestCharacter::StopDash,DashStop,false);
+	}
+}
+
+void ATestCharacter::StopDash()
+{
+	GetCharacterMovement()->StopMovementImmediately();
+	GetCharacterMovement()->BrakingFrictionFactor = 2.0f;
+	GetWorldTimerManager().SetTimer(UnusedHandle,this,&ATestCharacter::ResetDash, DashCooldown,false);
+}
+
+void ATestCharacter::ResetDash()
+{
+	bCanDash = true;
+}
+
+
+
+
 #pragma endregion
+
 
 
 

@@ -38,11 +38,19 @@ void AWeapon::WeaponFire()
 
 	AActor* MyOwner = GetOwner();
 
-	if (MyOwner)
+	Controller = Cast<ACharacterPlayerController>(UGameplayStatics::GetActorOfClass(this,ACharacterPlayerController::StaticClass()));
+
+
+	if (MyOwner && Controller)
 	{
 
 		FVector MuzzleLocation = WeaponMesh->GetSocketLocation(MuzzleSocketName);
 		FRotator MuzzleRotation = WeaponMesh->GetSocketRotation(MuzzleSocketName);
+
+
+		/*Controller->GetMouseCursor();
+
+		Controller->DeprojectMousePositionToWorld();*/
 
 		
 		//Direccion de disparo del arma

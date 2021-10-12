@@ -1,0 +1,35 @@
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\Definitions.ProjectDream.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Source\ProjectDream\Framework\ProjectDreamGameMode.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Inc\ProjectDream\ProjectDreamGameMode.generated.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Source\ProjectDream\Framework\../ProjectDreamPlayerController.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Inc\ProjectDream\ProjectDreamPlayerController.generated.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Source\ProjectDream\Framework\../ProjectDreamCharacter.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Inc\ProjectDream\ProjectDreamCharacter.generated.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Source\ProjectDream\Framework\../Player/HUD/PlayerHUD.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Source\ProjectDream\Player\HUD\DebugHUD.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/HUD.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/HUDHitBox.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/DebugTextInfo.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DebugTextInfo.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\HUD.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/Canvas.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Public\CanvasItem.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/Font.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/FontImportOptions.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\FontImportOptions.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\SlateCore\Public\Fonts/FontProviderInterface.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\SlateCore\FontProviderInterface.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Font.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Canvas.generated.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Inc\ProjectDream\DebugHUD.generated.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Inc\ProjectDream\PlayerHUD.generated.h

@@ -4,6 +4,7 @@
 #include "../ProjectDreamPlayerController.h"
 #include "../ProjectDreamCharacter.h"
 #include "UObject/ConstructorHelpers.h"
+#include "../Player/HUD/PlayerHUD.h"
 
 AProjectDreamGameMode::AProjectDreamGameMode()
 {
@@ -16,4 +17,8 @@ AProjectDreamGameMode::AProjectDreamGameMode()
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
+
+
+	HUDClass = APlayerHUD::StaticClass();
+
 }

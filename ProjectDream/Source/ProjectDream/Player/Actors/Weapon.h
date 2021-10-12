@@ -7,6 +7,7 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Particles/ParticleSystem.h"
+#include "../PlayerControllers/CharacterPlayerController.h"
 #include "Weapon.generated.h"
 
 UCLASS()
@@ -35,6 +36,11 @@ public:
 	//Variable que contiene el nombre del socket de la arma
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category=Player)
 	FName MuzzleSocketName = "MuzzleSocket";
+
+
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Player)
+	class ACharacterPlayerController* Controller = nullptr;
+
 
 protected:
 	// Called when the game starts or when spawned
