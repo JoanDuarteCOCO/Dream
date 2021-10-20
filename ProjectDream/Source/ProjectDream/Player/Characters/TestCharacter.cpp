@@ -7,6 +7,8 @@
 #include "GameFramework/PlayerController.h"
 #include "Engine/World.h"
 #include "Kismet/GameplayStatics.h"
+#include "Components/CapsuleComponent.h"
+#include "../../ProjectDream.h"
 
 // Sets default values
 ATestCharacter::ATestCharacter()
@@ -42,6 +44,10 @@ ATestCharacter::ATestCharacter()
 
 	//GetCharacterMovement()->Collisi
 	
+	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health Component"));
+
+
+	GetCapsuleComponent()->SetCollisionResponseToChannel(COLLISION_WEAPON,ECR_Ignore);
 
 }
 
@@ -52,10 +58,10 @@ void ATestCharacter::BeginPlay()
 	Super::BeginPlay();
 
 
-	//Aqui se manda a llamar lafuncionpara spawnear el arma en el brazo del player cuando inicie el juego
+	//Aqui se manda a llamar la funcionpara spawnear el arma en el brazo del player cuando inicie el juego
 	SpawnWeapon();
 
-	
+	HealthComponent->OnHealthChanged.AddDynamic(this,&ATestCharacter::OnHealthChanged);
 	
 }
 
@@ -189,8 +195,6 @@ void ATestCharacter::SpawnWeapon()
 }
 
 
-
-
 void ATestCharacter::Dash()
 {
 	if (bCanDash)
@@ -218,6 +222,31 @@ void ATestCharacter::ResetDash()
 
 
 #pragma endregion
+
+
+
+void ATestCharacter::OnHealthChanged(UHealthComponent* healthComponent, float Health, float HealthDelta, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser)
+{
+	if (Health <= 0.0f && !bDied)
+	{
+		bDied = true;
+
+		GetCharacterMovement()->StopMovementImmediately();
+		/*GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		
+		DetachFromControllerPendingDestroy();
+
+		SetLifeSpan(10.0f);*/
+
+		//SetActorRotation(FRotator(0.0f));
+
+		GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+		SetLifeSpan(5.0f);
+
+
+	}
+}
 
 
 

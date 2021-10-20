@@ -17,6 +17,9 @@ class PROJECTDREAM_API ACharacterPlayerController : public APlayerController
 public:
 	
 	ACharacterPlayerController();
+
+
+	virtual void Tick(float DeltaTime) override;
 	
 	
 };

@@ -18,3 +18,4 @@ D:\UnrealProjects\Maestria\Dream\ProjectDream\Source\ProjectDream\Player\Actors\
 D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Inc\ProjectDream\CharacterPlayerController.generated.h
 D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Inc\ProjectDream\Weapon.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Source\ProjectDream\Player\Actors\../../ProjectDream.h

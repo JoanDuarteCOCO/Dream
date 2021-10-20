@@ -7,6 +7,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "../Actors/Weapon.h"
+#include "../Components/HealthComponent.h"
 #include "TestCharacter.generated.h"
 
 UCLASS()
@@ -43,6 +44,10 @@ public:
 	FTimerHandle UnusedHandle;
 
 
+	//clase del component de salud
+	 UHealthComponent* HealthComponent;
+
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -67,7 +72,12 @@ public:
 	UFUNCTION(BlueprintCallable,Category="Player")
 	void SpawnWeapon();
 
+	//Funcion para la salud
+	UFUNCTION(BlueprintCallable,Category="Player")
+	void OnHealthChanged(UHealthComponent* healthComponent, float Health, float HealthDelta, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
 
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Player")
+	bool bDied = false;
 
 private:
 	

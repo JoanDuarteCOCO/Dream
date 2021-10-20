@@ -4,4 +4,6 @@
 
 #include "CoreMinimal.h"
 
-DECLARE_LOG_CATEGORY_EXTERN(LogProjectDream, Log, All);
+//DECLARE_LOG_CATEGORY_EXTERN(LogProjectDream, Log, All);
+
+#define COLLISION_WEAPON		ECC_GameTraceChannel1

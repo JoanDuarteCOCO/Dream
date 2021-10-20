@@ -3,6 +3,7 @@
 
 #include "Weapon.h"
 #include "DrawDebugHelpers.h"
+#include "../../ProjectDream.h"
 
 // Sets default values
 AWeapon::AWeapon()
@@ -71,7 +72,7 @@ void AWeapon::WeaponFire()
 		//FVector TracerEndPoint = TraceEnd;
 
 
-		if (GetWorld()->LineTraceSingleByChannel(Hit,MuzzleLocation,TraceEnd,ECollisionChannel::ECC_Visibility,QueryParams))
+		if (GetWorld()->LineTraceSingleByChannel(Hit,MuzzleLocation,TraceEnd, COLLISION_WEAPON,QueryParams))
 		{
 			AActor* HitActor = Hit.GetActor();
 

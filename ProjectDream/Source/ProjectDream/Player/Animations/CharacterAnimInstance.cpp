@@ -34,6 +34,11 @@ void UCharacterAnimInstance::BlueprintUpdateProperties(float DeltaTime)
 		FRotator Rotation = Character->GetActorRotation();
 
 		Direction = CalculateDirection(Velocity, Rotation);
+
+		if (Character->bDied == true)
+		{
+			bDead = true;
+		}
 	}
 }
 

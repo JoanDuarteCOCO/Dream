@@ -34,5 +34,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Player)
 		float Direction = 0.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Player)
+		bool bDead = false;
 	
 };
