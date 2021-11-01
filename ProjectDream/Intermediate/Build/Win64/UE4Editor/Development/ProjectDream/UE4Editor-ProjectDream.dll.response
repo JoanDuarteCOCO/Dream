@@ -34,6 +34,7 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\ProjectDreamEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\BotEnemy.cpp.obj"
 "D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\ProjectDreamGameMode.cpp.obj"
 "D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\DummyTarget.cpp.obj"
 "D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\Weapon.cpp.obj"
@@ -46,6 +47,7 @@
 "D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\ProjectDream.cpp.obj"
 "D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\ProjectDreamCharacter.cpp.obj"
 "D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\ProjectDreamPlayerController.cpp.obj"
+"D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\BotEnemy.gen.cpp.obj"
 "D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\CharacterAnimInstance.gen.cpp.obj"
 "D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\CharacterPlayerController.gen.cpp.obj"
 "D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Development\ProjectDream\DebugHUD.gen.cpp.obj"

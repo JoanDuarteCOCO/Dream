@@ -9,6 +9,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Components/CapsuleComponent.h"
 #include "../../ProjectDream.h"
+#include "DrawDebugHelpers.h"
 
 // Sets default values
 ATestCharacter::ATestCharacter()
@@ -52,6 +53,8 @@ ATestCharacter::ATestCharacter()
 }
 
 
+
+
 // Called when the game starts or when spawned
 void ATestCharacter::BeginPlay()
 {
@@ -62,6 +65,8 @@ void ATestCharacter::BeginPlay()
 	SpawnWeapon();
 
 	HealthComponent->OnHealthChanged.AddDynamic(this,&ATestCharacter::OnHealthChanged);
+
+	PlayerControllerRef = Cast<APlayerController>(GetController());
 	
 }
 
@@ -106,6 +111,19 @@ void ATestCharacter::Tick(float DeltaTime)
 	//{
 	//	DashTimer = FMath::Max(0.0f,DashTimer - DeltaTime);
 	//}
+
+	if (PlayerControllerRef)
+	{
+		FHitResult HitResult;
+		PlayerControllerRef->GetHitResultUnderCursor(ECC_Visibility,false,HitResult);
+		/*PlayerControllerRef->Cursor*/
+		//PlayerControllerRef->SetMouseLocation(-35.0f,17.0f);
+
+		DrawDebugSphere(GetWorld(),HitResult.ImpactPoint + FVector(-35.0f,17.0f,0.0f),20.0f,12,FColor::Red,false,-1.0f);
+
+
+		RotateCharacter(HitResult.ImpactPoint + FVector(-35.0f, 17.0f, 0.0f));
+	}
 
 }
 
@@ -225,7 +243,7 @@ void ATestCharacter::ResetDash()
 
 
 
-void ATestCharacter::OnHealthChanged(UHealthComponent* healthComponent, float Health, float HealthDelta, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser)
+void ATestCharacter::OnHealthChanged(UHealthComponent* OwningHealthComponent, float Health, float HealthDelta, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser)
 {
 	if (Health <= 0.0f && !bDied)
 	{
@@ -240,14 +258,40 @@ void ATestCharacter::OnHealthChanged(UHealthComponent* healthComponent, float He
 
 		//SetActorRotation(FRotator(0.0f));
 
+		//DetachFromControllerPendingDestroy();
+
 		GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
-		SetLifeSpan(5.0f);
+		SetLifeSpan(10.0f);
 
+		//PlayerControllerRef->bEnableMouseOverEvents = false;
 
 	}
 }
 
+
+void ATestCharacter::RotateCharacter(FVector LookAtTarget)
+{
+	FVector ToTarget = LookAtTarget - GetActorLocation();
+
+	FRotator LookRotation = FRotator(0.0f,ToTarget.Rotation().Yaw,0.0f);
+
+
+	SetActorRotation(LookRotation+ FRotator(0.0f,9.5f,0.0f));
+
+	/*if (GetActorRotation().Yaw < -120.0f)
+	{
+		SetActorRotation(LookRotation + FRotator(0.0f, -50.0f, 0.0f));
+	}
+	else {
+		SetActorRotation(LookRotation);
+	}*/
+
+	
+
+	
+
+}
 
 
 

@@ -49,3 +49,9 @@ D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor
 D:\UnrealProjects\Maestria\Dream\ProjectDream\Source\ProjectDream\Player\Characters\../Components/HealthComponent.h
 D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Inc\ProjectDream\HealthComponent.generated.h
 D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Inc\ProjectDream\TestCharacter.generated.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Source\ProjectDream\Player\HUD\../../AI/Pawns/BotEnemy.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/SphereComponent.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h
+D:\UnrealProjects\Maestria\Dream\ProjectDream\Intermediate\Build\Win64\UE4Editor\Inc\ProjectDream\BotEnemy.generated.h

@@ -12,6 +12,7 @@ class UHealthComponent;
 class UDamageType;
 class AController;
 class AActor;
+struct FVector;
 #ifdef PROJECTDREAM_TestCharacter_generated_h
 #error "TestCharacter.generated.h already included, missing '#pragma once' in TestCharacter.h"
 #endif
@@ -25,6 +26,7 @@ class AActor;
 	DECLARE_FUNCTION(execFire); \
 	DECLARE_FUNCTION(execMoveRight); \
 	DECLARE_FUNCTION(execMoveForward); \
+	DECLARE_FUNCTION(execRotateCharacter); \
 	DECLARE_FUNCTION(execResetDash); \
 	DECLARE_FUNCTION(execStopDash); \
 	DECLARE_FUNCTION(execDash);
@@ -37,6 +39,7 @@ class AActor;
 	DECLARE_FUNCTION(execFire); \
 	DECLARE_FUNCTION(execMoveRight); \
 	DECLARE_FUNCTION(execMoveForward); \
+	DECLARE_FUNCTION(execRotateCharacter); \
 	DECLARE_FUNCTION(execResetDash); \
 	DECLARE_FUNCTION(execStopDash); \
 	DECLARE_FUNCTION(execDash);

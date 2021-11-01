@@ -21,6 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_UDamageType_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AController_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	PROJECTDREAM_API UClass* Z_Construct_UClass_AWeapon_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
@@ -28,7 +29,7 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 // End Cross Module References
 	DEFINE_FUNCTION(ATestCharacter::execOnHealthChanged)
 	{
-		P_GET_OBJECT(UHealthComponent,Z_Param_healthComponent);
+		P_GET_OBJECT(UHealthComponent,Z_Param_OwningHealthComponent);
 		P_GET_PROPERTY(FFloatProperty,Z_Param_Health);
 		P_GET_PROPERTY(FFloatProperty,Z_Param_HealthDelta);
 		P_GET_OBJECT(UDamageType,Z_Param_DamageType);
@@ -36,7 +37,7 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 		P_GET_OBJECT(AActor,Z_Param_DamageCauser);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->OnHealthChanged(Z_Param_healthComponent,Z_Param_Health,Z_Param_HealthDelta,Z_Param_DamageType,Z_Param_InstigatedBy,Z_Param_DamageCauser);
+		P_THIS->OnHealthChanged(Z_Param_OwningHealthComponent,Z_Param_Health,Z_Param_HealthDelta,Z_Param_DamageType,Z_Param_InstigatedBy,Z_Param_DamageCauser);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ATestCharacter::execSpawnWeapon)
@@ -67,6 +68,14 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->MoveForward(Z_Param_Value);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ATestCharacter::execRotateCharacter)
+	{
+		P_GET_STRUCT(FVector,Z_Param_LookAtTarget);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RotateCharacter(Z_Param_LookAtTarget);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ATestCharacter::execResetDash)
@@ -100,6 +109,7 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 			{ "MoveRight", &ATestCharacter::execMoveRight },
 			{ "OnHealthChanged", &ATestCharacter::execOnHealthChanged },
 			{ "ResetDash", &ATestCharacter::execResetDash },
+			{ "RotateCharacter", &ATestCharacter::execRotateCharacter },
 			{ "SpawnWeapon", &ATestCharacter::execSpawnWeapon },
 			{ "StopDash", &ATestCharacter::execStopDash },
 		};
@@ -224,7 +234,7 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 	{
 		struct TestCharacter_eventOnHealthChanged_Parms
 		{
-			UHealthComponent* healthComponent;
+			UHealthComponent* OwningHealthComponent;
 			float Health;
 			float HealthDelta;
 			const UDamageType* DamageType;
@@ -232,9 +242,9 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 			AActor* DamageCauser;
 		};
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_healthComponent_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OwningHealthComponent_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_healthComponent;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OwningHealthComponent;
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Health;
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_HealthDelta;
 #if WITH_METADATA
@@ -250,11 +260,11 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_healthComponent_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_OwningHealthComponent_MetaData[] = {
 		{ "EditInline", "true" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_healthComponent = { "healthComponent", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TestCharacter_eventOnHealthChanged_Parms, healthComponent), Z_Construct_UClass_UHealthComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_healthComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_healthComponent_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_OwningHealthComponent = { "OwningHealthComponent", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TestCharacter_eventOnHealthChanged_Parms, OwningHealthComponent), Z_Construct_UClass_UHealthComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_OwningHealthComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_OwningHealthComponent_MetaData)) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TestCharacter_eventOnHealthChanged_Parms, Health), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_HealthDelta = { "HealthDelta", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TestCharacter_eventOnHealthChanged_Parms, HealthDelta), METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
@@ -266,7 +276,7 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_InstigatedBy = { "InstigatedBy", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TestCharacter_eventOnHealthChanged_Parms, InstigatedBy), Z_Construct_UClass_AController_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_DamageCauser = { "DamageCauser", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TestCharacter_eventOnHealthChanged_Parms, DamageCauser), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_healthComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_OwningHealthComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_Health,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_HealthDelta,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATestCharacter_OnHealthChanged_Statics::NewProp_DamageType,
@@ -310,6 +320,39 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATestCharacter_ResetDash_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ATestCharacter_RotateCharacter_Statics
+	{
+		struct TestCharacter_eventRotateCharacter_Parms
+		{
+			FVector LookAtTarget;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_LookAtTarget;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ATestCharacter_RotateCharacter_Statics::NewProp_LookAtTarget = { "LookAtTarget", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TestCharacter_eventRotateCharacter_Parms, LookAtTarget), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATestCharacter_RotateCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATestCharacter_RotateCharacter_Statics::NewProp_LookAtTarget,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATestCharacter_RotateCharacter_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Player" },
+		{ "ModuleRelativePath", "Player/Characters/TestCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATestCharacter_RotateCharacter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATestCharacter, nullptr, "RotateCharacter", nullptr, nullptr, sizeof(TestCharacter_eventRotateCharacter_Parms), Z_Construct_UFunction_ATestCharacter_RotateCharacter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATestCharacter_RotateCharacter_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATestCharacter_RotateCharacter_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATestCharacter_RotateCharacter_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATestCharacter_RotateCharacter()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATestCharacter_RotateCharacter_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -420,8 +463,9 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 		{ &Z_Construct_UFunction_ATestCharacter_Fire, "Fire" }, // 3555240625
 		{ &Z_Construct_UFunction_ATestCharacter_MoveForward, "MoveForward" }, // 1457832974
 		{ &Z_Construct_UFunction_ATestCharacter_MoveRight, "MoveRight" }, // 4190806255
-		{ &Z_Construct_UFunction_ATestCharacter_OnHealthChanged, "OnHealthChanged" }, // 167196495
+		{ &Z_Construct_UFunction_ATestCharacter_OnHealthChanged, "OnHealthChanged" }, // 776797444
 		{ &Z_Construct_UFunction_ATestCharacter_ResetDash, "ResetDash" }, // 2212868924
+		{ &Z_Construct_UFunction_ATestCharacter_RotateCharacter, "RotateCharacter" }, // 3505318786
 		{ &Z_Construct_UFunction_ATestCharacter_SpawnWeapon, "SpawnWeapon" }, // 3125635497
 		{ &Z_Construct_UFunction_ATestCharacter_StopDash, "StopDash" }, // 2374906453
 	};
@@ -554,7 +598,7 @@ void EmptyLinkFunctionForGeneratedCodeTestCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATestCharacter, 2693628780);
+	IMPLEMENT_CLASS(ATestCharacter, 3355031213);
 	template<> PROJECTDREAM_API UClass* StaticClass<ATestCharacter>()
 	{
 		return ATestCharacter::StaticClass();

@@ -47,6 +47,12 @@ public:
 	//clase del component de salud
 	 UHealthComponent* HealthComponent;
 
+	 //Rotar Personaje hacia la direccion del puntero del mouse
+	 APlayerController* PlayerControllerRef;
+
+	 UFUNCTION(BlueprintCallable,Category=Player)
+	 void RotateCharacter(FVector LookAtTarget);
+
 
 protected:
 	// Called when the game starts or when spawned
@@ -74,7 +80,7 @@ public:
 
 	//Funcion para la salud
 	UFUNCTION(BlueprintCallable,Category="Player")
-	void OnHealthChanged(UHealthComponent* healthComponent, float Health, float HealthDelta, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
+	void OnHealthChanged(UHealthComponent* OwningHealthComponent, float Health, float HealthDelta, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Player")
 	bool bDied = false;
